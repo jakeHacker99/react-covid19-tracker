@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   const [countries, setCountries] = useState(["us", "we", "ar"]);
+  const [country, setCountry] = useState("worldwide");
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -19,6 +20,13 @@ function App() {
     };
     getCountriesData();
   }, []);
+  const onCountryChange = async (event) => {
+    console.log(event);
+    const countryCode = event.target.value;
+    setCountry(countryCode);
+    console.log(event.target.length);
+    console.log("cc: ", countryCode);
+  };
 
   return (
     <div className="app">
@@ -26,14 +34,12 @@ function App() {
         <h1>Covid-19 tracker</h1>
 
         <FormControl className="app_dropdown">
-          <Select variant="outlined" value="abc">
+          <Select variant="outlined" onChange={onCountryChange} value={country}>
             {/* get all countries */}
 
+            <MenuItem value="worldwide">Worldwide</MenuItem>
             {countries.map((country) => (
-              <MenuItem value="country">
-                {" "}
-                {country.value} {country.name}{" "}
-              </MenuItem>
+              <MenuItem value={country.value}>{country.name}</MenuItem>
             ))}
             {/* 
           
