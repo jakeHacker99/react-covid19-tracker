@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FormControl, MenuItem, Select } from "@material-ui/core";
 import "./App.css";
+import InfoBox from "./InfoBox";
 
 function App() {
   const [countries, setCountries] = useState(["us", "we", "ar"]);
@@ -24,8 +25,6 @@ function App() {
     console.log(event);
     const countryCode = event.target.value;
     setCountry(countryCode);
-    console.log(event.target.length);
-    console.log("cc: ", countryCode);
   };
 
   return (
@@ -41,13 +40,14 @@ function App() {
             {countries.map((country) => (
               <MenuItem value={country.value}>{country.name}</MenuItem>
             ))}
-            {/* 
-          
-<MenuItem value="worldwide">worldwide</MenuItem>
-            <MenuItem value="worldwide">3</MenuItem>
-            <MenuItem value="worldwide">4</MenuItem> */}
           </Select>
         </FormControl>
+      </div>
+
+      <div className="app__stats">
+        <InfoBox title="Coronavirus Cases" cases={124} total={2000} />
+        <InfoBox title="Recovered" cases={12} total={2000} />
+        <InfoBox title="Deaths" cases={5} total={2000} />
       </div>
 
       {/* header*/}
