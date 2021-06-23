@@ -1,5 +1,5 @@
 import React from "react";
-import "./Table.css";
+import "../Css/Table.css";
 import numeral from "numeral";
 
 function Table({ countries }) {

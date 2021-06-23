@@ -7,11 +7,11 @@ import {
   Select,
 } from "@material-ui/core";
 import "./App.css";
-import InfoBox from "./InfoBox";
-import Map from "./Map";
-import Table from "./Table";
+import InfoBox from "./Components/InfoBox";
+import Map from "./Components/Map";
+import Table from "./Components/Table";
 import { prettyPrintStat, sortData } from "./util";
-import LineGraph from "./LineGraph";
+import LineGraph from "./Components/LineGraph";
 import "leaflet/dist/leaflet.css";
 
 function App() {
