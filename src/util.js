@@ -9,16 +9,16 @@ const casesTypeColors = {
     multiplier: 400,
   },
   recovered: {
-    hex: "#7ddd71d",
+    hex: "#7dd71d",
     rgb: "rgb(125, 215, 29)",
     halp_op: "rgba(125, 215, 29. 0.5)",
-    multiplier: 800,
+    multiplier: 500,
   },
   deaths: {
     hex: "#fb4443",
     rgb: "rgb(251, 68, 67)",
     half_op: "rgba(251, 68, 67, 0.5",
-    multiplier: 1500,
+    multiplier: 700,
   },
 };
 
