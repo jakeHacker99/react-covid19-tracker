@@ -12,6 +12,11 @@ frontend:
 database: 
   -firebase
 
+modules:
+  -Leaflet
+  -Material UI
+  -Numeral
+  -Chartsjs-2
 ``` 
 }
 
